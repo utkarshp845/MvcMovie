@@ -1,5 +1,8 @@
+/* Base styles */
 html {
   font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
 }
 
 @media (min-width: 768px) {
@@ -8,24 +11,105 @@ html {
   }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #afcdeb;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background-color: #343a40;
+  color: rgb(66, 30, 243);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #007bff;
+  padding: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+  background-color: #0056b3;
+}
+
+/* Button styles */
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+/* Footer styles */
+footer {
+  background-color: #787d83;
+  color: white;
+  text-align: center;
+  padding: 0.25rem 0; /* Reduced padding */
+  margin-top: 1rem; /* Add margin-top to separate footer from content */
+  position: relative; /* Changed from absolute to relative */
+  width: 100%;
+  font-size: 0.875rem; /* Optional: Smaller font size */
 }
 
-body {
-  margin-bottom: 60px;
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* Card styles */
+.card {
+  background-color: rgb(37, 32, 198);
+  border: 1px solid #3751d3;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.card h2 {
+  margin-top: 0;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+table th {
+  background-color: #f8f9fa;
+  text-align: left;
 }
