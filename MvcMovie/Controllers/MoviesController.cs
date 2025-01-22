@@ -20,8 +20,9 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index(string movieGenre, string searchString)
+        public async Task<IActionResult> Index(string movieGenre, string searchString, DateTime? releaseDate, string rating)
         {
+
             if (_context.Movie == null)
             {
                 return Problem("Entity set 'MvcMovieContext.Movie' not found.");
@@ -42,6 +43,16 @@ namespace MvcMovie.Controllers
             if (!string.IsNullOrEmpty(movieGenre))
             {
                 movies = movies.Where(x => x.Genre == movieGenre);
+            }
+
+            if (releaseDate.HasValue)
+            {
+                movies = movies.Where(x => x.ReleaseDate == releaseDate);
+            }
+
+            if (!string.IsNullOrEmpty(rating))
+            {
+                movies = movies.Where(x => x.Rating == rating);
             }
 
             var movieGenreVM = new MovieGenreViewModel

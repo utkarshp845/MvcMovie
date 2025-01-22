@@ -38,7 +38,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: rgb(238, 165, 165);
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
@@ -112,4 +112,9 @@ table th, table td {
 table th {
   background-color: #f8f9fa;
   text-align: left;
+}
+
+navbar {
+  background-color: #1b2c3d;
+  padding: 0.5rem;
 }
